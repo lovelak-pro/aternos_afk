@@ -21,6 +21,17 @@ This is an easy-to-use AFK bot made for Minecraft Java Edition servers on Aterno
 
 ---
 
+> **Note:**  
+> This bot is designed to work best with Aternos servers running Minecraft version **1.16**.  
+> If you want to use a different Minecraft version, you’ll need to install the following plugins on your server:
+>
+> - **ViaRewind**
+> - **ViaVersion**
+>
+> These plugins let players (and bots) using other Minecraft versions join your server.
+
+---
+
 ## Installation
 
 1. **Download or Clone the Repository**
