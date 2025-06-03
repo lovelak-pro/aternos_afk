@@ -35,7 +35,7 @@ This is an easy-to-use AFK bot made for Minecraft Java Edition servers on Aterno
 
 ## Installation
 
-1. **Download or Clone the Repository**
+1. **Clone the Repository**
 
    ```sh
    git clone https://github.com/lovelak-pro/aternos_afk_bot.git
