@@ -21,7 +21,8 @@ This is an easy-to-use AFK bot made for Minecraft Java Edition servers on Aterno
 
 ---
 
-> **Note:**  
+## Note
+
 > This bot is designed to work best with Aternos servers running Minecraft version **1.16**.  
 > If you want to use a different Minecraft version, you’ll need to install the following plugins on your server:
 >
@@ -56,3 +57,9 @@ Here’s how your `config.json` should look:
   "version": "1.21.4"
 }
 ```
+
+---
+
+## Disclaimer
+
+This bot is for educational purposes only. Use it responsibly and at your own risk.
