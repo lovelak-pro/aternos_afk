@@ -12,6 +12,16 @@ const bot = mineflayer.createBot({
   version: config.version, // <-- set your server version here
 });
 
+bot.on("error", (err) => {
+  if (err.code === "ECONNREFUSED" || err.code === "ECONNRESET") {
+    console.log(
+      "[AFK BOT] Connection failed: The server is offline, the IP/port is incorrect, or your host is blocking the connection."
+    );
+  } else {
+    console.log("[AFK BOT] Error:", err);
+  }
+});
+
 // Log connection
 bot.on("login", () => {
   console.log(`[AFK BOT] Logged in as ${bot.username}`);
@@ -50,7 +60,6 @@ function reconnect() {
 }
 bot.on("end", reconnect);
 bot.on("kicked", reconnect);
-bot.on("error", (err) => console.log("[AFK BOT] Error:", err));
 
 // Optional: keep-alive web server for Replit/Heroku
 try {
