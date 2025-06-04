@@ -8,7 +8,7 @@ This is an easy-to-use AFK bot made for Minecraft Java Edition servers on Aterno
 
 - **Easy setup:** Just edit a config file and run!
 - **Random movement:** The bot moves and looks around to avoid AFK kicks.
-- **Automatic reconnect:** If disconnected, the bot will try to reconnect after 5 seconds.
+- **Automatic reconnect:** If disconnected, the bot will try to reconnect after 10 seconds.
 - **Keep-alive web server:** Optional web server for platforms like Replit/Heroku.
 - **No main account risk:** Use any alternate or offline Minecraft account.
 
