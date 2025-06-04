@@ -53,10 +53,10 @@ setInterval(randomMove, 5000 + Math.random() * 5000);
 
 // Reconnect on kick or end
 function reconnect() {
-  console.log("[AFK BOT] Disconnected, reconnecting in 5s...");
+  console.log("[AFK BOT] Disconnected, reconnecting in 10s...");
   setTimeout(() => {
     process.exit(1); // Let a process manager or script restart the bot
-  }, 5000);
+  }, 10000);
 }
 bot.on("end", reconnect);
 bot.on("kicked", reconnect);
