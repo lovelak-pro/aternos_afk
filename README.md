@@ -28,6 +28,7 @@ This is an easy-to-use AFK bot made for Minecraft Java Edition servers on Aterno
 >
 > - **ViaRewind**
 > - **ViaVersion**
+> - **ViaBackwards**
 >
 > These plugins let players (and bots) using other Minecraft versions join your server.
 
