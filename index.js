@@ -1,41 +1,36 @@
 const mineflayer = require("mineflayer");
 const fs = require("fs");
 
-// Load config
 const config = JSON.parse(fs.readFileSync("config.json", "utf8"));
 
-// Create the bot
 const bot = mineflayer.createBot({
   host: config.ip,
   port: config.port,
   username: config.name,
-  version: config.version, // <-- set your server version here
+  version: config.version,
 });
 
 bot.on("error", (err) => {
   if (err.code === "ECONNREFUSED" || err.code === "ECONNRESET") {
     console.log(
-      "[AFK BOT] Connection failed: The server is offline, the IP/port is incorrect, or your host is blocking the connection."
+      "[BOT] Connection failed: The server is offline, the IP/port is incorrect, or your host is blocking the connection."
     );
   } else {
-    console.log("[AFK BOT] Error:", err);
+    console.log("[BOT] Error:", err);
   }
 });
 
-// Log connection
 bot.on("login", () => {
-  console.log(`[AFK BOT] Logged in as ${bot.username}`);
+  console.log(`[BOT] Logged in as ${bot.username}`);
 });
 
-// Random movement to stay AFK
 function randomMove() {
   if (!bot.entity) return;
-  // Randomly look around
+
   const yaw = Math.random() * Math.PI * 2;
   const pitch = ((Math.random() - 0.5) * Math.PI) / 2;
   bot.look(yaw, pitch, true);
 
-  // Randomly walk or stop
   const actions = ["forward", "back", "left", "right"];
   actions.forEach((action) => bot.setControlState(action, false));
   if (Math.random() > 0.5) {
@@ -48,15 +43,13 @@ function randomMove() {
   }
 }
 
-// Move every 5-10 seconds
 setInterval(randomMove, 5000 + Math.random() * 5000);
 
-// Reconnect on kick or end
 function reconnect() {
-  console.log("[AFK BOT] Disconnected, reconnecting in 10s...");
+  console.log("[BOT] Disconnected, reconnecting in 3s...");
   setTimeout(() => {
-    process.exit(1); // Let a process manager or script restart the bot
-  }, 10000);
+    process.exit(1);
+  }, 2000);
 }
 bot.on("end", reconnect);
 bot.on("kicked", reconnect);
