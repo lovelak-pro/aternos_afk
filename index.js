@@ -50,7 +50,7 @@ function createBot() {
     console.clear();
     clearInterval(moveInterval);
     console.log("[BOT] Disconnected, reconnecting in 5s...");
-    setTimeout(createBot, 5000);
+    // setTimeout(createBot, 5000);
   }
   bot.on("end", reconnect);
   bot.on("kicked", reconnect);
