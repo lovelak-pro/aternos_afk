@@ -40,7 +40,7 @@ This is an easy-to-use AFK bot made for Minecraft Java Edition servers on Aterno
 
    ```sh
    git clone https://github.com/lovelak-pro/aternos_afk.git
-   cd aternos_afk_bot
+   cd aternos_afk
    ```
 
 ---
